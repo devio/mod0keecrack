@@ -7,17 +7,17 @@
  * This file is part of mod0keecrack.
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
- * Thorsten Schroeder <ths at modzero dot ch> wrote this file. As long as you 
- * retain this notice you can do whatever you want with this stuff. If we meet 
- * some day, and you think this stuff is worth it, you can buy me a beer in 
+ * Thorsten Schroeder <ths at modzero dot ch> wrote this file. As long as you
+ * retain this notice you can do whatever you want with this stuff. If we meet
+ * some day, and you think this stuff is worth it, you can buy me a beer in
  * return. Thorsten Schroeder.
  *
  * NON-MILITARY-USAGE CLAUSE
- * Redistribution and use in source and binary form for military use and 
+ * Redistribution and use in source and binary form for military use and
  * military research is not permitted. Infringement of these clauses may
- * result in publishing the source code of the utilizing applications and 
+ * result in publishing the source code of the utilizing applications and
  * libraries to the public. As this software is developed, tested and
- * reviewed by *international* volunteers, this clause shall not be refused 
+ * reviewed by *international* volunteers, this clause shall not be refused
  * due to the matter of *national* security concerns.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
@@ -34,7 +34,7 @@
  * File: mod0keecrack.h
  * Description: Project header files.
  */
- 
+
 #ifndef _CRYPTO_H
 #define _CRYPTO_H
 

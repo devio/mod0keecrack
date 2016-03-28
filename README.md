@@ -11,7 +11,7 @@ mod0keecrack handles KeePass 2 databases that are encrypted with password-only, 
 
 Currently, there is no incremental or template-based bruteforce algorithm for passphrase generation implemented yet. To use mod0keecrack, you need to generate own wordlists or supply a wordlist via pipe/stdin. For example, you could use the john password cracker to generate wordlists and feed them directly into mod0keecrack via stdin. You can also use text-files with a wordlist on the command-line.
 
-Using wordlists is recommended, as dumb incremental brute-force may take a too long time due to the crypto-algorithms that are used by KeePass databases (SHA256 and many AES key-transformation rounds). 
+Using wordlists is recommended, as dumb incremental brute-force may take a too long time due to the crypto-algorithms that are used by KeePass databases (SHA256 and many AES key-transformation rounds).
 
 mod0keecrack is plain C and has no 3rd party library dependencies on Windows, as it's using the Microsoft Cryptographic (CNG) Framework. A platform independent implementation could be done by simply porting crypto-ms.c to e.g. crypto-openssl.c.
 
@@ -84,17 +84,17 @@ mod0keecrack was written by Thorsten (THS) Schroeder of modzero. You can get in 
  * This file is part of mod0keecrack.
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
- * Thorsten Schroeder <ths at modzero dot ch> wrote this file. As long as you 
- * retain this notice you can do whatever you want with this stuff. If we meet 
- * some day, and you think this stuff is worth it, you can buy me a beer in 
+ * Thorsten Schroeder <ths at modzero dot ch> wrote this file. As long as you
+ * retain this notice you can do whatever you want with this stuff. If we meet
+ * some day, and you think this stuff is worth it, you can buy me a beer in
  * return. Thorsten Schroeder.
  *
  * NON-MILITARY-USAGE CLAUSE
- * Redistribution and use in source and binary form for military use and 
+ * Redistribution and use in source and binary form for military use and
  * military research is not permitted. Infringement of these clauses may
- * result in publishing the source code of the utilizing applications and 
+ * result in publishing the source code of the utilizing applications and
  * libraries to the public. As this software is developed, tested and
- * reviewed by *international* volunteers, this clause shall not be refused 
+ * reviewed by *international* volunteers, this clause shall not be refused
  * due to the matter of *national* security concerns.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"

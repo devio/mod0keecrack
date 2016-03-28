@@ -7,17 +7,17 @@
  * This file is part of mod0keecrack.
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
- * Thorsten Schroeder <ths at modzero dot ch> wrote this file. As long as you 
- * retain this notice you can do whatever you want with this stuff. If we meet 
- * some day, and you think this stuff is worth it, you can buy me a beer in 
+ * Thorsten Schroeder <ths at modzero dot ch> wrote this file. As long as you
+ * retain this notice you can do whatever you want with this stuff. If we meet
+ * some day, and you think this stuff is worth it, you can buy me a beer in
  * return. Thorsten Schroeder.
  *
  * NON-MILITARY-USAGE CLAUSE
- * Redistribution and use in source and binary form for military use and 
+ * Redistribution and use in source and binary form for military use and
  * military research is not permitted. Infringement of these clauses may
- * result in publishing the source code of the utilizing applications and 
+ * result in publishing the source code of the utilizing applications and
  * libraries to the public. As this software is developed, tested and
- * reviewed by *international* volunteers, this clause shall not be refused 
+ * reviewed by *international* volunteers, this clause shall not be refused
  * due to the matter of *national* security concerns.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
@@ -38,55 +38,55 @@
 #ifndef _MOD0KEECRACK_H
 #define _MOD0KEECRACK_H
 
-typedef uintmax_t	off_t;
+typedef uintmax_t off_t;
 
 
 enum _m0_kdbx_headerid {
-	END,
-	COMMENT,
-	CIPHERID,
-	COMPRESSIONFLAGS,
-	MASTERSEED,
-	TRANSFORMSEED,				// 5
-	TRANSFORMROUNDS,
-	ENCRYPTIONIV,
-	PROTECTEDSTREAMKEY,
-	STREAMSTARTBYTES,
-	INNERRANDOMSTREAMID, 	// 10
-	HEADERIDCOUNT
+  END,
+  COMMENT,
+  CIPHERID,
+  COMPRESSIONFLAGS,
+  MASTERSEED,
+  TRANSFORMSEED,        // 5
+  TRANSFORMROUNDS,
+  ENCRYPTIONIV,
+  PROTECTEDSTREAMKEY,
+  STREAMSTARTBYTES,
+  INNERRANDOMSTREAMID,  // 10
+  HEADERIDCOUNT
 };
 
 typedef enum _m0_kdbx_headerid m0_kdbx_headerid_t;
 
 typedef struct _m0_kdbx_header_entry {
-	uint8_t 	id;
-	uint16_t 	len;
-	uint8_t 	*data;
-	uint32_t	dw;
-	uint64_t	qw;
+  uint8_t   id;
+  uint16_t  len;
+  uint8_t   *data;
+  uint32_t  dw;
+  uint64_t  qw;
 } m0_kdbx_header_entry_t;
-	
-	
+
+
 typedef struct _m0_kdbx_header {
-	uint32_t magic;
-	uint32_t identifier;
-	uint16_t minor_version;
-	uint16_t major_version;
+  uint32_t magic;
+  uint32_t identifier;
+  uint16_t minor_version;
+  uint16_t major_version;
 } m0_kdbx_header_t;
 
 typedef struct _m0_kdbx_payload {
-	off_t	offset_start;
-	off_t pos;
-	size_t len;
-	uint8_t	*encrypted;
-	uint8_t	*decrypted;	
+  off_t offset_start;
+  off_t pos;
+  size_t len;
+  uint8_t *encrypted;
+  uint8_t *decrypted;
 
 } m0_kdbx_payload_t;
 
 typedef struct _m0kdbx_data {
-		m0_kdbx_header_t	header;
-    size_t 		data_len;
-    uint8_t 	*data;
+    m0_kdbx_header_t  header;
+    size_t    data_len;
+    uint8_t   *data;
 } m0_kbdx_data_t;
 
 typedef struct _m0_kdbx_database {
